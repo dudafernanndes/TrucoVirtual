@@ -1,0 +1,20 @@
+public class Monte {
+    
+    private List<Carta> cartas = new ArrayList<>();
+
+    public Monte() {
+        for (Naipe naipe : Naipe.values()) {
+            for(int numero = 1; numero <= 13; numero++){
+                cartas.add(new Carta(numero, naipe));
+            }
+        }
+    }
+
+    public void embaralhar(){  //ensinamento: buscar métodos automatizados
+        Collections.shuffle(cartas);
+    }
+
+    public Carta virar(){   //ensinamento: ler a documentação dos métodos
+        return cartas.remove(0);
+    }
+}
