@@ -10,7 +10,8 @@ public class Carta {
     }
 
     public String imagePath(){
-        return "classic-cards/" + numero + naipe + ".png";
+        String[] prefixos = {"Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"};
+        return "classic-cards/" + prefixos + naipe + ".png";
     }
 
     public int getNumero() {
